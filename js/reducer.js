@@ -9,6 +9,7 @@ function reducer(state, action) {
     default: 
       return state;
   }
+}
   
 function dispatch(action) {
   state = reducer(state, action);
