@@ -10,7 +10,6 @@ function reducer(state, action) {
       return state;
   }
   
-  function dispatch(action) {
-    state = reducer(state, action);
-  }
+function dispatch(action) {
+  state = reducer(state, action);
 }
