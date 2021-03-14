@@ -1,8 +1,8 @@
 // add code snippets from README
 
-let state = {count: 0}
+let state;
 
-function reducer(state, action) {
+function reducer(state = {count: 0}, action) {
   switch (action.type) {
     case 'INCREASE_COUNT': 
       return {count: state.count + 1};
@@ -13,6 +13,7 @@ function reducer(state, action) {
   
 function dispatch(action) {
   state = reducer(state, action);
+    render();
 }
 
 function render() {
@@ -20,3 +21,6 @@ function render() {
   
   container.textContent = state.count;
 }
+
+let button = document.getElementById('button');
+dispatch({type: '@@INIT'})
